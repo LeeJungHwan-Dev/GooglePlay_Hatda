@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refirstback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back1"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".readmemo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        >
+
+        <ImageButton
+            android:id="@+id/Setting"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_baseline_settings_24"
+            />
+
+        <ImageButton
+            android:id="@+id/reexit"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/ic_baseline_exit_to_app_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edithistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/reeditDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/topandbottom"
+            android:fontFamily="@font/font"
+            android:paddingTop="2.5dp"
+            android:paddingBottom="2.5dp"
+            android:text="@string/날짜라벨"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/weatherEditLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line"
+            android:orientation="horizontal"
+            android:paddingTop="2.5dp"
+            android:paddingBottom="2.5dp">
+
+            <TextView
+                android:id="@+id/Weather"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/font"
+                android:text="@string/날씨라벨"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/reWeatheredit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:editable="false"
+                android:fontFamily="@font/font"
+                android:hint="@string/날씨힌트"
+                android:textColorHint="@color/black"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mindeditLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line"
+            android:orientation="horizontal"
+            android:paddingTop="2.5dp"
+            android:paddingBottom="2.5dp">
+
+            <TextView
+                android:id="@+id/mind"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/font"
+                android:text="@string/기분라벨"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/remindedit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:fontFamily="@font/font"
+                android:scrollbars="horizontal"
+                android:editable="false"
+                android:hint="@string/기분힌트"
+                android:textColorHint="@color/black"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tagEditLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line"
+            android:orientation="horizontal"
+            android:paddingTop="2.5dp"
+            android:paddingBottom="2.5dp">
+
+            <TextView
+                android:id="@+id/Tag"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/font"
+                android:text="@string/태그라벨"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/retagedit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:editable="false"
+                android:fontFamily="@font/font"
+                android:hint="@string/태그힌트"
+                android:textColorHint="@color/black"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/rehistorypic"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_baseline_add_photo_alternate_24" />
+
+                <TextView
+                    android:id="@+id/reeditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/font"
+                    android:gravity="center"
+                    android:scrollbars="vertical"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/actionbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/topline"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/del"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_baseline_delete_forever_24"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/reedit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_baseline_edit_24"
+            android:scaleType="fitCenter" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

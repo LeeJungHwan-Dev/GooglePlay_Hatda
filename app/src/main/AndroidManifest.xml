@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.history.hatda">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/icon2_main"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/icon2_main_round"
+        android:supportsRtl="true"
+        android:theme="@style/notitle">
+        <activity
+            android:name=".bigpicshow"
+            android:exported="true" />
+        <activity
+            android:name=".imgshow"
+            android:exported="true" />
+        <activity
+            android:name=".setAlarm"
+            android:theme="@style/notitle2" />
+        <activity
+            android:name=".getsetpassword"
+            android:theme="@style/notitle2"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".setting"
+            android:theme="@style/notitle2" />
+        <activity android:name=".readmemo" />
+        <activity
+            android:name=".edit"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".history" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/notitle2"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".receivetime" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9257002707604510~7745179066" />
+    </application>
+
+</manifest>

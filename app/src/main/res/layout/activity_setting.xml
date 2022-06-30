@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back1"
+    android:orientation="vertical"
+    tools:context=".setting">
+
+    <LinearLayout
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/gohistory"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_baseline_exit_to_app_24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/al"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/settime"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/maruburiregular"
+            android:gravity="center"
+            android:text="@string/알림설정"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/setal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_line"
+            android:fontFamily="@font/maruburiregular"
+            android:text="@string/알림설정버튼" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gettimelay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/gettime"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/maruburiregular"
+            android:gravity="center"
+            android:text="@string/설정된시간"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/maruburiregular"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/time"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/setpassword"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/maruburiregular"
+            android:gravity="center"
+            android:text="@string/비밀번호설정"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/setpas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_line"
+            android:fontFamily="@font/maruburiregular"
+            android:text="@string/비밀번호설정버튼" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fontchoselay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fontchose"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/font"
+            android:gravity="center"
+            android:text="@string/font_chose"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/fontitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sizelay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fontsizeoptitle"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/zoom"
+            android:fontFamily="@font/font"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/sizeseekBar"
+            android:layout_width="match_parent"
+            android:max="40"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fontsetcheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/aftertitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/font"
+            android:gravity="center"
+            android:text="@string/test_font"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/after"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="가나다라마바사아자차카타파하\n ABCDEFG\n 123456789"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_line"
+            android:fontFamily="@font/font"
+            android:layout_marginTop="10dp"
+            android:text="적용" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/libutton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_line"
+            android:fontFamily="@font/maruburiregular"
+            android:text="@string/리셋버튼" />
+
+        <Button
+            android:id="@+id/openli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_line"
+            android:fontFamily="@font/maruburiregular"
+            android:text="@string/오픈소스라이선스버튼" />
+
+        <Button
+            android:id="@+id/fontli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_line"
+            android:fontFamily="@font/maruburiregular"
+            android:text="@string/폰트라이선스버튼" />
+
+        <TextView
+            android:id="@+id/ps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/maruburiregular"
+            android:gravity="center"
+            android:text="@string/정책"
+            android:textColor="#747474"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

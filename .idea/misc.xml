@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable-v24/button_line2.xml" value="0.17037037037037037" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable-v24/button_line3.xml" value="0.17037037037037037" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable-v24/line3.xml" value="0.1953125" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/box_line.xml" value="0.1953125" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/button_line.xml" value="0.17222222222222222" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.17037037037037037" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/ic_baseline_add_photo_alternate_24.xml" value="0.17037037037037037" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/ic_baseline_color_lens_24.xml" value="0.17037037037037037" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/ic_baseline_delete_forever_24.xml" value="0.17037037037037037" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.17037037037037037" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/ic_baseline_exit_to_app_24.xml" value="0.17037037037037037" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/ic_baseline_line_weight_24.xml" value="0.17037037037037037" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/ic_baseline_photo_album_24.xml" value="0.1685185185185185" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/ic_baseline_save_24.xml" value="0.17037037037037037" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.17037037037037037" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/ic_baseline_sort_24.xml" value="0.17037037037037037" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/ic_launcher_background.xml" value="0.17037037037037037" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/ic_main_background.xml" value="0.1953125" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/icon1_main_background.xml" value="0.1953125" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/icon_main_background.xml" value="0.1953125" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/line.xml" value="0.17222222222222222" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/sellectday.xml" value="0.1" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/drawable/topline.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/a123.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/activity_bigpicshow.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/activity_edit.xml" value="0.25" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/activity_getsetpassword.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/activity_history.xml" value="0.17407407407407408" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/activity_imgshow.xml" value="0.22" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/activity_main.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/activity_set_alarm.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/activity_setting.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/license.xml" value="0.2" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/listview.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/readmemo.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/singer_item.xml" value="0.11574074074074074" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/layout/spinner_row2.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/mipmap-anydpi-v26/ic_main.xml" value="0.1953125" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/mipmap-anydpi-v26/ic_main_round.xml" value="0.1" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/mipmap-anydpi-v26/icon1_main.xml" value="0.1953125" />
+        <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/mipmap-anydpi-v26/icon1_main_round.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v24/line3.xml" value="0.1255" />
+        <entry key="app/src/main/res/layout/activity_bigpicshow.xml" value="0.22447916666666667" />
+        <entry key="app/src/main/res/layout/activity_edit.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_getsetpassword.xml" value="0.22447916666666667" />
+        <entry key="app/src/main/res/layout/activity_history.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/layout/activity_imgshow.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/activity_setting.xml" value="0.22447916666666667" />
+        <entry key="app/src/main/res/layout/license.xml" value="0.22447916666666667" />
+        <entry key="app/src/main/res/layout/listview.xml" value="0.13333333333333333" />
+        <entry key="app/src/main/res/layout/readmemo.xml" value="0.22447916666666667" />
+        <entry key="app/src/main/res/layout/singer_item.xml" value="0.22447916666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>
