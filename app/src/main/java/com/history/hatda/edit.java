@@ -270,6 +270,7 @@ public class edit extends AppCompatActivity {
                     @Override
                     public void run() {
                         if (readdot.getcomple() != 0) {
+
                             size = infotimes.size();
                             for (int i = 0; i < size; i++) {
                                 cl.addDecorator(new EventDecorator(infotimes.get(i)));
@@ -1045,8 +1046,7 @@ public class edit extends AppCompatActivity {
             try {
                 String pattern = "yyyy-MM-dd";
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
-                Date timeToSet = simpleDateFormat.parse("2022-05-24");
-                Log.i("test",infoday);
+                Date timeToSet = simpleDateFormat.parse(infoday);
                 FileTime time = FileTime.fromMillis(timeToSet.getTime());
 
                 Files.setAttribute(file123.toPath(), "lastModifiedTime", time);

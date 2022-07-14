@@ -12,10 +12,10 @@ android {
         applicationId "com.history.hatda"
         minSdkVersion 27
         targetSdkVersion 31
-        versionCode 28
-        versionName "6.4"
+        versionCode 29
+        versionName "6.5"
         //oneStore 패키지 명 : com.history.hatdaOnestore 버전 코드 11 버전 2.7
-        //플레이 스토어 패키지 명 : com.history.hatda 버전 코드 28 버전 6.4
+        //플레이 스토어 패키지 명 : com.history.hatda 버전 코드 29 버전 6.5
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -51,7 +51,7 @@ dependencies {
     implementation 'com.google.android.libraries.places:places:2.4.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.13.2'
@@ -59,4 +59,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
     implementation("androidx.work:work-runtime-ktx:2.7.0")
+
 }

@@ -3,6 +3,7 @@ package com.history.hatda;
 
 
 import android.graphics.Color;
+import android.util.Log;
 
 
 import org.threeten.bp.LocalDate;
@@ -31,6 +32,6 @@ public class EventDecorator implements DayViewDecorator {
 
     @Override
     public void decorate(DayViewFacade view) {
-        view.addSpan(new DotSpan(6, Color.rgb(92,209,229)));
+        view.addSpan(new DotSpan(6, Color.rgb(0,216,255)));
     }
 }
