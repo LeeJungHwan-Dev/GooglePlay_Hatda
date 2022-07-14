@@ -78,7 +78,7 @@ public class setAlarm extends AppCompatActivity {
                 Intent intent = new Intent(this, receivetime.class);
                 PendingIntent alarmIntent = PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_IMMUTABLE) ;
 
-                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
+                alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
                         AlarmManager.INTERVAL_DAY, alarmIntent);
 
                 Toast.makeText(setAlarm.this, R.string.comple_alrm_set_coment,Toast.LENGTH_LONG).show();
