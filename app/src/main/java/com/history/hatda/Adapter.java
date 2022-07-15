@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,6 +55,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
         this.mind = mind;
         this.tag = tag;
 
+
     }
 
     @NonNull
@@ -69,214 +71,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
 
-    try {
-        if (weather.get(position).equals("")) {
-            holder.itemweather.setVisibility(View.GONE);
-        } else {
-            holder.itemweather.setVisibility(View.VISIBLE);
-            holder.itemweathertext.setText(weather.get(position));
-        }
-        if (mind.get(position).equals("")) {
-            holder.itemmind.setVisibility(View.GONE);
-        } else {
-            holder.itemmind.setVisibility(View.VISIBLE);
-            holder.itemmindtext.setText(mind.get(position));
-        }
-        if (tag.get(position).equals("")) {
-            holder.itemtag.setVisibility(View.GONE);
-        } else {
-            holder.itemtag.setVisibility(View.VISIBLE);
-            holder.itemtagtext.setText(tag.get(position));
-        }
-    } catch (Exception e) {
 
-    }
+        viewSet(holder,position);
 
-        try {
-            if (position > 3) {
-                holder.bodyview.setAnimation(AnimationUtils.loadAnimation(mContext, android.R.anim.fade_in));
-            }
+        setAni(holder,position);
 
-            try {
-                holder.time.setText(date.get(position));
-                String memo = memotext.get(position);
-                holder.textmemo.setText(memo);
-                holder.godays.setText(goday.get(position));
-                holder.setimg(position);
-
-
-            } catch (Exception e) {
-            }
-
-                if (sort.get(position).equals("1") || sort.get(position).equals("4")) {
-                    holder.textmemo.setGravity(Gravity.CENTER_HORIZONTAL);
-                } else if (sort.get(position).equals("2")) {
-                    holder.textmemo.setGravity(Gravity.LEFT);
-                } else {
-                    holder.textmemo.setGravity(Gravity.RIGHT);
-                }
-
-
-            try {
-                holder.bodyview.setBackgroundColor(Integer.parseInt(back.get(position)));
-                holder.textmemo.setTextColor(Integer.parseInt(fontcolor.get(position)));
-                holder.time.setTextColor(Integer.parseInt(fontcolor.get(position)));
-
-
-
-                holder.itemweathertitle.setTextColor(Integer.parseInt(fontcolor.get(position)));
-                holder.itemmindtitle.setTextColor(Integer.parseInt(fontcolor.get(position)));
-                holder.itemtagtitle.setTextColor(Integer.parseInt(fontcolor.get(position)));
-                holder.itemweathertext.setTextColor(Integer.parseInt(fontcolor.get(position)));
-                holder.itemmindtext.setTextColor(Integer.parseInt(fontcolor.get(position)));
-                holder.itemtagtext.setTextColor(Integer.parseInt(fontcolor.get(position)));
-            } catch (Exception e) {
-
-            }
-        } catch (Resources.NotFoundException e) {
-
-        }
-
-
-
-
-
-        try {
-            FileInputStream inputfile = mContext.openFileInput("fontstyle.txt");
-            DataInputStream dis = new DataInputStream(inputfile);
-
-            int typenumber = dis.read();
-            dis.close();
-
-
-            if(typenumber-'0' == 0){
-                Typeface typeface = mContext.getResources().getFont(R.font.maruburiregular);
-
-
-                holder.godays.setTypeface(typeface);
-                holder.itemweathertext.setTypeface(typeface);
-                holder.itemmindtext.setTypeface(typeface);
-                holder.itemtagtext.setTypeface(typeface);
-                holder.itemweathertitle.setTypeface(typeface);
-                holder.itemmindtitle.setTypeface(typeface);
-                holder.textmemo.setTypeface(typeface);
-                holder.itemtagtitle.setTypeface(typeface);
-                holder.godays.setTypeface(typeface);
-                holder.time.setTypeface(typeface);
-
-
-            }else if(typenumber-'0' == 1){
-                Typeface typeface = mContext.getResources().getFont(R.font.nanumguri);
-
-
-                holder.godays.setTypeface(typeface);
-                holder.itemweathertext.setTypeface(typeface);
-                holder.itemmindtext.setTypeface(typeface);
-                holder.itemtagtext.setTypeface(typeface);
-                holder.itemweathertitle.setTypeface(typeface);
-                holder.itemmindtitle.setTypeface(typeface);
-                holder.textmemo.setTypeface(typeface);
-                holder.itemtagtitle.setTypeface(typeface);
-                holder.godays.setTypeface(typeface);
-                holder.time.setTypeface(typeface);
-
-
-
-                holder.godays.setTextSize(20);
-                holder.itemweathertext.setTextSize(20);
-                holder.itemmindtext.setTextSize(20);
-                holder.itemtagtext.setTextSize(20);
-                holder.itemweathertitle.setTextSize(20);
-                holder.itemmindtitle.setTextSize(20);
-                holder.textmemo.setTextSize(20);
-                holder.itemtagtitle.setTextSize(20);
-                holder.time.setTextSize(20);
-
-
-            }else if(typenumber-'0' == 2){
-                Typeface typeface = mContext.getResources().getFont(R.font.nanumming);
-
-                holder.godays.setTypeface(typeface);
-                holder.itemweathertext.setTypeface(typeface);
-                holder.itemmindtext.setTypeface(typeface);
-                holder.itemtagtext.setTypeface(typeface);
-                holder.itemweathertitle.setTypeface(typeface);
-                holder.itemmindtitle.setTypeface(typeface);
-                holder.textmemo.setTypeface(typeface);
-                holder.itemtagtitle.setTypeface(typeface);
-                holder.godays.setTypeface(typeface);
-                holder.time.setTypeface(typeface);
-
-
-
-
-
-                holder.godays.setTextSize(20);
-                holder.itemweathertext.setTextSize(20);
-                holder.itemmindtext.setTextSize(20);
-                holder.itemtagtext.setTextSize(20);
-                holder.itemweathertitle.setTextSize(20);
-                holder.itemmindtitle.setTextSize(20);
-                holder.textmemo.setTextSize(20);
-                holder.itemtagtitle.setTextSize(20);
-                holder.time.setTextSize(20);
-            }else if(typenumber-'0' == 3){
-                Typeface typeface = mContext.getResources().getFont(R.font.nanumgom);
-
-                holder.godays.setTypeface(typeface);
-                holder.itemweathertext.setTypeface(typeface);
-                holder.itemmindtext.setTypeface(typeface);
-                holder.itemtagtext.setTypeface(typeface);
-                holder.itemweathertitle.setTypeface(typeface);
-                holder.itemmindtitle.setTypeface(typeface);
-                holder.textmemo.setTypeface(typeface);
-                holder.itemtagtitle.setTypeface(typeface);
-                holder.godays.setTypeface(typeface);
-                holder.time.setTypeface(typeface);
-
-
-
-
-                holder.godays.setTextSize(20);
-                holder.itemweathertext.setTextSize(20);
-                holder.itemmindtext.setTextSize(20);
-                holder.itemtagtext.setTextSize(20);
-                holder.itemweathertitle.setTextSize(20);
-                holder.itemmindtitle.setTextSize(20);
-                holder.textmemo.setTextSize(20);
-                holder.itemtagtitle.setTextSize(20);
-                holder.time.setTextSize(20);
-            }else if(typenumber-'0' == 4){
-                Typeface typeface = mContext.getResources().getFont(R.font.naumgori);
-
-                holder.godays.setTypeface(typeface);
-                holder.itemweathertext.setTypeface(typeface);
-                holder.itemmindtext.setTypeface(typeface);
-                holder.itemtagtext.setTypeface(typeface);
-                holder.itemweathertitle.setTypeface(typeface);
-                holder.itemmindtitle.setTypeface(typeface);
-                holder.textmemo.setTypeface(typeface);
-                holder.itemtagtitle.setTypeface(typeface);
-                holder.godays.setTypeface(typeface);
-                holder.time.setTypeface(typeface);
-
-
-
-                holder.godays.setTextSize(20);
-                holder.itemweathertext.setTextSize(20);
-                holder.itemmindtext.setTextSize(20);
-                holder.itemtagtext.setTextSize(20);
-                holder.itemweathertitle.setTextSize(20);
-                holder.itemmindtitle.setTextSize(20);
-                holder.textmemo.setTextSize(20);
-                holder.itemtagtitle.setTextSize(20);
-                holder.time.setTextSize(20);
-            }
-        } catch (FileNotFoundException e) {
-
-        } catch (IOException e) {
-
-        }
+        setFont(holder,mContext);
 
 
     }
@@ -285,6 +85,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
     public int getItemCount() {
 
         return date.size();
+
     }
 
     class Holder extends RecyclerView.ViewHolder {
@@ -344,6 +145,224 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
                     ((Activity) mContext).finish();
                 }
             });
+        }
+    }
+
+
+    public void setFont(Holder holder , Context mContexts){
+
+
+        try {
+            FileInputStream inputfile = mContexts.openFileInput("fontstyle.txt");
+            DataInputStream dis = new DataInputStream(inputfile);
+
+            int typenumber = dis.read();
+            dis.close();
+
+
+            if(typenumber-'0' == 0){
+                Typeface typeface = mContexts.getResources().getFont(R.font.maruburiregular);
+
+
+                holder.godays.setTypeface(typeface);
+                holder.itemweathertext.setTypeface(typeface);
+                holder.itemmindtext.setTypeface(typeface);
+                holder.itemtagtext.setTypeface(typeface);
+                holder.itemweathertitle.setTypeface(typeface);
+                holder.itemmindtitle.setTypeface(typeface);
+                holder.textmemo.setTypeface(typeface);
+                holder.itemtagtitle.setTypeface(typeface);
+                holder.godays.setTypeface(typeface);
+                holder.time.setTypeface(typeface);
+
+
+            }else if(typenumber-'0' == 1){
+                Typeface typeface = mContexts.getResources().getFont(R.font.nanumguri);
+
+
+                holder.godays.setTypeface(typeface);
+                holder.itemweathertext.setTypeface(typeface);
+                holder.itemmindtext.setTypeface(typeface);
+                holder.itemtagtext.setTypeface(typeface);
+                holder.itemweathertitle.setTypeface(typeface);
+                holder.itemmindtitle.setTypeface(typeface);
+                holder.textmemo.setTypeface(typeface);
+                holder.itemtagtitle.setTypeface(typeface);
+                holder.godays.setTypeface(typeface);
+                holder.time.setTypeface(typeface);
+
+
+
+                holder.godays.setTextSize(20);
+                holder.itemweathertext.setTextSize(20);
+                holder.itemmindtext.setTextSize(20);
+                holder.itemtagtext.setTextSize(20);
+                holder.itemweathertitle.setTextSize(20);
+                holder.itemmindtitle.setTextSize(20);
+                holder.textmemo.setTextSize(20);
+                holder.itemtagtitle.setTextSize(20);
+                holder.time.setTextSize(20);
+
+
+            }else if(typenumber-'0' == 2){
+                Typeface typeface = mContexts.getResources().getFont(R.font.nanumming);
+
+                holder.godays.setTypeface(typeface);
+                holder.itemweathertext.setTypeface(typeface);
+                holder.itemmindtext.setTypeface(typeface);
+                holder.itemtagtext.setTypeface(typeface);
+                holder.itemweathertitle.setTypeface(typeface);
+                holder.itemmindtitle.setTypeface(typeface);
+                holder.textmemo.setTypeface(typeface);
+                holder.itemtagtitle.setTypeface(typeface);
+                holder.godays.setTypeface(typeface);
+                holder.time.setTypeface(typeface);
+
+
+
+
+
+                holder.godays.setTextSize(20);
+                holder.itemweathertext.setTextSize(20);
+                holder.itemmindtext.setTextSize(20);
+                holder.itemtagtext.setTextSize(20);
+                holder.itemweathertitle.setTextSize(20);
+                holder.itemmindtitle.setTextSize(20);
+                holder.textmemo.setTextSize(20);
+                holder.itemtagtitle.setTextSize(20);
+                holder.time.setTextSize(20);
+            }else if(typenumber-'0' == 3){
+                Typeface typeface = mContexts.getResources().getFont(R.font.nanumgom);
+
+                holder.godays.setTypeface(typeface);
+                holder.itemweathertext.setTypeface(typeface);
+                holder.itemmindtext.setTypeface(typeface);
+                holder.itemtagtext.setTypeface(typeface);
+                holder.itemweathertitle.setTypeface(typeface);
+                holder.itemmindtitle.setTypeface(typeface);
+                holder.textmemo.setTypeface(typeface);
+                holder.itemtagtitle.setTypeface(typeface);
+                holder.godays.setTypeface(typeface);
+                holder.time.setTypeface(typeface);
+
+
+
+
+                holder.godays.setTextSize(20);
+                holder.itemweathertext.setTextSize(20);
+                holder.itemmindtext.setTextSize(20);
+                holder.itemtagtext.setTextSize(20);
+                holder.itemweathertitle.setTextSize(20);
+                holder.itemmindtitle.setTextSize(20);
+                holder.textmemo.setTextSize(20);
+                holder.itemtagtitle.setTextSize(20);
+                holder.time.setTextSize(20);
+            }else if(typenumber-'0' == 4){
+                Typeface typeface = mContexts.getResources().getFont(R.font.naumgori);
+
+                holder.godays.setTypeface(typeface);
+                holder.itemweathertext.setTypeface(typeface);
+                holder.itemmindtext.setTypeface(typeface);
+                holder.itemtagtext.setTypeface(typeface);
+                holder.itemweathertitle.setTypeface(typeface);
+                holder.itemmindtitle.setTypeface(typeface);
+                holder.textmemo.setTypeface(typeface);
+                holder.itemtagtitle.setTypeface(typeface);
+                holder.godays.setTypeface(typeface);
+                holder.time.setTypeface(typeface);
+
+
+
+                holder.godays.setTextSize(20);
+                holder.itemweathertext.setTextSize(20);
+                holder.itemmindtext.setTextSize(20);
+                holder.itemtagtext.setTextSize(20);
+                holder.itemweathertitle.setTextSize(20);
+                holder.itemmindtitle.setTextSize(20);
+                holder.textmemo.setTextSize(20);
+                holder.itemtagtitle.setTextSize(20);
+                holder.time.setTextSize(20);
+            }
+        } catch (FileNotFoundException e) {
+
+        } catch (IOException e) {
+
+        }
+
+
+    }
+
+
+    public void viewSet(Holder holder , int positions){
+        try {
+            if (weather.get(positions).equals("")) {
+                holder.itemweather.setVisibility(View.GONE);
+            } else {
+                holder.itemweather.setVisibility(View.VISIBLE);
+                holder.itemweathertext.setText(weather.get(positions));
+            }
+            if (mind.get(positions).equals("")) {
+                holder.itemmind.setVisibility(View.GONE);
+            } else {
+                holder.itemmind.setVisibility(View.VISIBLE);
+                holder.itemmindtext.setText(mind.get(positions));
+            }
+            if (tag.get(positions).equals("")) {
+                holder.itemtag.setVisibility(View.GONE);
+            } else {
+                holder.itemtag.setVisibility(View.VISIBLE);
+                holder.itemtagtext.setText(tag.get(positions));
+            }
+        } catch (Exception e) {
+
+        }
+    }
+
+
+    public void setAni(Holder holder , int positions){
+        try {
+            if (positions > 3) {
+                holder.bodyview.setAnimation(AnimationUtils.loadAnimation(mContext, android.R.anim.fade_in));
+            }
+
+            try {
+                holder.time.setText(date.get(positions));
+                String memo = memotext.get(positions);
+                holder.textmemo.setText(memo);
+                holder.godays.setText(goday.get(positions));
+                holder.setimg(positions);
+
+
+            } catch (Exception e) {
+            }
+
+            if (sort.get(positions).equals("1") || sort.get(positions).equals("4")) {
+                holder.textmemo.setGravity(Gravity.CENTER_HORIZONTAL);
+            } else if (sort.get(positions).equals("2")) {
+                holder.textmemo.setGravity(Gravity.LEFT);
+            } else {
+                holder.textmemo.setGravity(Gravity.RIGHT);
+            }
+
+
+            try {
+                holder.bodyview.setBackgroundColor(Integer.parseInt(back.get(positions)));
+                holder.textmemo.setTextColor(Integer.parseInt(fontcolor.get(positions)));
+                holder.time.setTextColor(Integer.parseInt(fontcolor.get(positions)));
+
+
+
+                holder.itemweathertitle.setTextColor(Integer.parseInt(fontcolor.get(positions)));
+                holder.itemmindtitle.setTextColor(Integer.parseInt(fontcolor.get(positions)));
+                holder.itemtagtitle.setTextColor(Integer.parseInt(fontcolor.get(positions)));
+                holder.itemweathertext.setTextColor(Integer.parseInt(fontcolor.get(positions)));
+                holder.itemmindtext.setTextColor(Integer.parseInt(fontcolor.get(positions)));
+                holder.itemtagtext.setTextColor(Integer.parseInt(fontcolor.get(positions)));
+            } catch (Exception e) {
+
+            }
+        } catch (Resources.NotFoundException e) {
+
         }
     }
 
