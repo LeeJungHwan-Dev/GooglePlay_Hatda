@@ -41,7 +41,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
     Context mContext;
     String chosetime, count, chosedate;
 
-
     public Adapter(ArrayList<String> date, ArrayList<String> textpath, ArrayList<String> goday, ArrayList<String> imgpath,ArrayList<String> sort,ArrayList<String> back, Context mContext,ArrayList<String>fontcolor, ArrayList<String> weather, ArrayList<String> mind, ArrayList<String> tag) {
         this.date = date; // 날짜
         this.memotext = textpath; //텍스트
