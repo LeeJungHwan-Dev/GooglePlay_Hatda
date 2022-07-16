@@ -89,5 +89,6 @@
     <string name="font_chose">Select Font</string>
     <string name="zoom">Zoom</string>
     <string name="test_font">Test</string>
+    <string name="적용">Apply</string>
 
 </resources>

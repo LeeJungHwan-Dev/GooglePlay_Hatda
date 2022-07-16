@@ -89,6 +89,7 @@
     <string name="font_chose">폰트 선택</string>
     <string name="zoom">확대</string>
     <string name="test_font">미리보기</string>
+    <string name="적용">적용</string>
 
 
 </resources>

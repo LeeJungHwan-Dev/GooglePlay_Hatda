@@ -89,4 +89,5 @@
     <string name="font_chose">Выбор шрифта</string>
     <string name="zoom">расширение</string>
     <string name="test_font">Контрольная работа</string>
+    <string name="적용">Применение</string>
 </resources>

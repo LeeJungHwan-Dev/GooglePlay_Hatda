@@ -196,7 +196,7 @@
             android:background="@drawable/button_line"
             android:fontFamily="@font/font"
             android:layout_marginTop="10dp"
-            android:text="적용" />
+            android:text="@string/적용" />
     </LinearLayout>
 
     <LinearLayout
