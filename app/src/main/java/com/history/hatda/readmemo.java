@@ -84,117 +84,9 @@ public class readmemo extends AppCompatActivity {
 
 
 
+        setFonts();
 
 
-        try {
-            FileInputStream inputfile = openFileInput("fontstyle.txt");
-            DataInputStream dis = new DataInputStream(inputfile);
-
-            int typenumber = dis.read();
-            dis.close();
-
-
-            if(typenumber-'0' == 0){
-                Typeface typeface = getResources().getFont(R.font.maruburiregular);
-                setday.setTypeface(typeface);
-                setmind.setTypeface(typeface);
-                mind.setTypeface(typeface);
-                setweather.setTypeface(typeface);
-                settag.setTypeface(typeface);
-                setmemo.setTypeface(typeface);
-                Tag.setTypeface(typeface);
-                Weather.setTypeface(typeface);
-
-
-
-
-            }else if(typenumber-'0' == 1){
-                Typeface typeface = getResources().getFont(R.font.nanumguri);
-                setday.setTypeface(typeface);
-                setmind.setTypeface(typeface);
-                mind.setTypeface(typeface);
-                setweather.setTypeface(typeface);
-                settag.setTypeface(typeface);
-                setmemo.setTypeface(typeface);
-                Tag.setTypeface(typeface);
-                Weather.setTypeface(typeface);
-
-
-                setday.setTextSize(20);
-                setmind.setTextSize(20);
-                mind.setTextSize(20);
-                setweather.setTextSize(20);
-                settag.setTextSize(20);
-                setmemo.setTextSize(20);
-                Tag.setTextSize(20);
-                Weather.setTextSize(20);
-            }else if(typenumber-'0' == 2){
-                Typeface typeface = getResources().getFont(R.font.nanumming);
-                setday.setTypeface(typeface);
-                setmind.setTypeface(typeface);
-                mind.setTypeface(typeface);
-                setweather.setTypeface(typeface);
-                settag.setTypeface(typeface);
-                setmemo.setTypeface(typeface);
-                Tag.setTypeface(typeface);
-                Weather.setTypeface(typeface);
-
-
-                setday.setTextSize(20);
-                setmind.setTextSize(20);
-                mind.setTextSize(20);
-                setweather.setTextSize(20);
-                settag.setTextSize(20);
-                setmemo.setTextSize(20);
-                Tag.setTextSize(20);
-                Weather.setTextSize(20);
-            }else if(typenumber-'0' == 3){
-                Typeface typeface = getResources().getFont(R.font.nanumgom);
-                setday.setTypeface(typeface);
-                setmind.setTypeface(typeface);
-                mind.setTypeface(typeface);
-                setweather.setTypeface(typeface);
-                settag.setTypeface(typeface);
-                setmemo.setTypeface(typeface);
-                Tag.setTypeface(typeface);
-                Weather.setTypeface(typeface);
-
-
-                setday.setTextSize(20);
-                setmind.setTextSize(20);
-                mind.setTextSize(20);
-                setweather.setTextSize(20);
-                settag.setTextSize(20);
-                setmemo.setTextSize(20);
-                Tag.setTextSize(20);
-                Weather.setTextSize(20);
-            }else if(typenumber-'0' == 4){
-                Typeface typeface = getResources().getFont(R.font.naumgori);
-                setday.setTypeface(typeface);
-                setmind.setTypeface(typeface);
-                mind.setTypeface(typeface);
-                setweather.setTypeface(typeface);
-                settag.setTypeface(typeface);
-                setmemo.setTypeface(typeface);
-                Tag.setTypeface(typeface);
-                Weather.setTypeface(typeface);
-
-
-
-                setday.setTextSize(20);
-                setmind.setTextSize(20);
-                mind.setTextSize(20);
-                setweather.setTextSize(20);
-                settag.setTextSize(20);
-                setmemo.setTextSize(20);
-                Tag.setTextSize(20);
-                Weather.setTextSize(20);
-            }
-        } catch (FileNotFoundException e) {
-
-        } catch (IOException e) {
-
-        }
 
         Intent intent = getIntent();
         day = intent.getStringExtra("day");
@@ -512,5 +404,118 @@ public class readmemo extends AppCompatActivity {
 
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+    }
+
+
+    public void setFonts(){
+        try {
+            FileInputStream inputfile = openFileInput("fontstyle.txt");
+            DataInputStream dis = new DataInputStream(inputfile);
+
+            int typenumber = dis.read();
+            dis.close();
+
+
+            if(typenumber-'0' == 0){
+                Typeface typeface = getResources().getFont(R.font.maruburiregular);
+                setday.setTypeface(typeface);
+                setmind.setTypeface(typeface);
+                mind.setTypeface(typeface);
+                setweather.setTypeface(typeface);
+                settag.setTypeface(typeface);
+                setmemo.setTypeface(typeface);
+                Tag.setTypeface(typeface);
+                Weather.setTypeface(typeface);
+
+
+
+
+            }else if(typenumber-'0' == 1){
+                Typeface typeface = getResources().getFont(R.font.nanumguri);
+                setday.setTypeface(typeface);
+                setmind.setTypeface(typeface);
+                mind.setTypeface(typeface);
+                setweather.setTypeface(typeface);
+                settag.setTypeface(typeface);
+                setmemo.setTypeface(typeface);
+                Tag.setTypeface(typeface);
+                Weather.setTypeface(typeface);
+
+
+                setday.setTextSize(20);
+                setmind.setTextSize(20);
+                mind.setTextSize(20);
+                setweather.setTextSize(20);
+                settag.setTextSize(20);
+                setmemo.setTextSize(20);
+                Tag.setTextSize(20);
+                Weather.setTextSize(20);
+            }else if(typenumber-'0' == 2){
+                Typeface typeface = getResources().getFont(R.font.nanumming);
+                setday.setTypeface(typeface);
+                setmind.setTypeface(typeface);
+                mind.setTypeface(typeface);
+                setweather.setTypeface(typeface);
+                settag.setTypeface(typeface);
+                setmemo.setTypeface(typeface);
+                Tag.setTypeface(typeface);
+                Weather.setTypeface(typeface);
+
+
+                setday.setTextSize(20);
+                setmind.setTextSize(20);
+                mind.setTextSize(20);
+                setweather.setTextSize(20);
+                settag.setTextSize(20);
+                setmemo.setTextSize(20);
+                Tag.setTextSize(20);
+                Weather.setTextSize(20);
+            }else if(typenumber-'0' == 3){
+                Typeface typeface = getResources().getFont(R.font.nanumgom);
+                setday.setTypeface(typeface);
+                setmind.setTypeface(typeface);
+                mind.setTypeface(typeface);
+                setweather.setTypeface(typeface);
+                settag.setTypeface(typeface);
+                setmemo.setTypeface(typeface);
+                Tag.setTypeface(typeface);
+                Weather.setTypeface(typeface);
+
+
+                setday.setTextSize(20);
+                setmind.setTextSize(20);
+                mind.setTextSize(20);
+                setweather.setTextSize(20);
+                settag.setTextSize(20);
+                setmemo.setTextSize(20);
+                Tag.setTextSize(20);
+                Weather.setTextSize(20);
+            }else if(typenumber-'0' == 4){
+                Typeface typeface = getResources().getFont(R.font.naumgori);
+                setday.setTypeface(typeface);
+                setmind.setTypeface(typeface);
+                mind.setTypeface(typeface);
+                setweather.setTypeface(typeface);
+                settag.setTypeface(typeface);
+                setmemo.setTypeface(typeface);
+                Tag.setTypeface(typeface);
+                Weather.setTypeface(typeface);
+
+
+
+                setday.setTextSize(20);
+                setmind.setTextSize(20);
+                mind.setTextSize(20);
+                setweather.setTextSize(20);
+                settag.setTextSize(20);
+                setmemo.setTextSize(20);
+                Tag.setTextSize(20);
+                Weather.setTextSize(20);
+            }
+        } catch (FileNotFoundException e) {
+
+        } catch (IOException e) {
+
+        }
     }
 }

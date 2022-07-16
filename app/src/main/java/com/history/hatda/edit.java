@@ -151,113 +151,7 @@ public class edit extends AppCompatActivity {
 
 
 
-        try {
-            FileInputStream inputfile = openFileInput("fontstyle.txt");
-            DataInputStream dis = new DataInputStream(inputfile);
-
-            int typenumber = dis.read();
-            dis.close();
-
-
-            if(typenumber-'0' == 0){
-                Typeface typeface = getResources().getFont(R.font.maruburiregular);
-                history.setTypeface(typeface);
-                dateedit.setTypeface(typeface);
-                mind.setTypeface(typeface);
-                weather.setTypeface(typeface);
-                tag.setTypeface(typeface);
-                mindtitle.setTypeface(typeface);
-                tagtitle.setTypeface(typeface);
-                weathertitle.setTypeface(typeface);
-
-
-            }else if(typenumber-'0' == 1){
-                Typeface typeface = getResources().getFont(R.font.nanumguri);
-                history.setTypeface(typeface);
-                dateedit.setTypeface(typeface);
-                mind.setTypeface(typeface);
-                weather.setTypeface(typeface);
-                tag.setTypeface(typeface);
-                mindtitle.setTypeface(typeface);
-                tagtitle.setTypeface(typeface);
-                weathertitle.setTypeface(typeface);
-
-
-                history.setTextSize(20);
-                dateedit.setTextSize(20);
-                mind.setTextSize(20);
-                weather.setTextSize(20);
-                tag.setTextSize(20);
-                mindtitle.setTextSize(20);
-                tagtitle.setTextSize(20);
-                weathertitle.setTextSize(20);
-            }else if(typenumber-'0' == 2){
-                Typeface typeface = getResources().getFont(R.font.nanumming);
-                history.setTypeface(typeface);
-                dateedit.setTypeface(typeface);
-                mind.setTypeface(typeface);
-                weather.setTypeface(typeface);
-                tag.setTypeface(typeface);
-                mindtitle.setTypeface(typeface);
-                tagtitle.setTypeface(typeface);
-                weathertitle.setTypeface(typeface);
-
-
-                history.setTextSize(20);
-                dateedit.setTextSize(20);
-                mind.setTextSize(20);
-                weather.setTextSize(20);
-                tag.setTextSize(20);
-                mindtitle.setTextSize(20);
-                tagtitle.setTextSize(20);
-                weathertitle.setTextSize(20);
-            }else if(typenumber-'0' == 3){
-                Typeface typeface = getResources().getFont(R.font.nanumgom);
-                history.setTypeface(typeface);
-                dateedit.setTypeface(typeface);
-                mind.setTypeface(typeface);
-                weather.setTypeface(typeface);
-                tag.setTypeface(typeface);
-                mindtitle.setTypeface(typeface);
-                tagtitle.setTypeface(typeface);
-                weathertitle.setTypeface(typeface);
-
-
-                history.setTextSize(20);
-                dateedit.setTextSize(20);
-                mind.setTextSize(20);
-                weather.setTextSize(20);
-                tag.setTextSize(20);
-                mindtitle.setTextSize(20);
-                tagtitle.setTextSize(20);
-                weathertitle.setTextSize(20);
-            }else if(typenumber-'0' == 4){
-                Typeface typeface = getResources().getFont(R.font.naumgori);
-                history.setTypeface(typeface);
-                dateedit.setTypeface(typeface);
-                mind.setTypeface(typeface);
-                weather.setTypeface(typeface);
-                tag.setTypeface(typeface);
-                mindtitle.setTypeface(typeface);
-                tagtitle.setTypeface(typeface);
-                weathertitle.setTypeface(typeface);
-
-
-
-                history.setTextSize(20);
-                dateedit.setTextSize(20);
-                mind.setTextSize(20);
-                weather.setTextSize(20);
-                tag.setTextSize(20);
-                mindtitle.setTextSize(20);
-                tagtitle.setTextSize(20);
-                weathertitle.setTextSize(20);
-            }
-        } catch (FileNotFoundException e) {
-
-        } catch (IOException e) {
-
-        }
+        setFonts();
 
 
         readdot readdot = new readdot(infotime);
@@ -475,7 +369,6 @@ public class edit extends AppCompatActivity {
                                 } else {
                                     dialog.show();
                                     savefile("d" + dates + ".txt", editdate);
-                                    Log.i("day3",dates);
                                     savefile("m" + dates + ".txt", mind.getText().toString());
                                     savefile("w" + dates + ".txt", weather.getText().toString());
                                     savefile("t" + dates + ".txt", tag.getText().toString());
@@ -625,6 +518,7 @@ public class edit extends AppCompatActivity {
             Intent intent = getIntent();
             day = intent.getStringExtra("날짜");
             infoday = intent.getStringExtra("날짜");
+
 
             StringBuffer sb = new StringBuffer();
             sb.append(infoday);
@@ -1253,6 +1147,117 @@ public class edit extends AppCompatActivity {
                     });
                 }
             });
+
+        }
+    }
+
+
+    public void setFonts(){
+        try {
+            FileInputStream inputfile = openFileInput("fontstyle.txt");
+            DataInputStream dis = new DataInputStream(inputfile);
+
+            int typenumber = dis.read();
+            dis.close();
+
+
+            if(typenumber-'0' == 0){
+                Typeface typeface = getResources().getFont(R.font.maruburiregular);
+                history.setTypeface(typeface);
+                dateedit.setTypeface(typeface);
+                mind.setTypeface(typeface);
+                weather.setTypeface(typeface);
+                tag.setTypeface(typeface);
+                mindtitle.setTypeface(typeface);
+                tagtitle.setTypeface(typeface);
+                weathertitle.setTypeface(typeface);
+
+
+            }else if(typenumber-'0' == 1){
+                Typeface typeface = getResources().getFont(R.font.nanumguri);
+                history.setTypeface(typeface);
+                dateedit.setTypeface(typeface);
+                mind.setTypeface(typeface);
+                weather.setTypeface(typeface);
+                tag.setTypeface(typeface);
+                mindtitle.setTypeface(typeface);
+                tagtitle.setTypeface(typeface);
+                weathertitle.setTypeface(typeface);
+
+
+                history.setTextSize(20);
+                dateedit.setTextSize(20);
+                mind.setTextSize(20);
+                weather.setTextSize(20);
+                tag.setTextSize(20);
+                mindtitle.setTextSize(20);
+                tagtitle.setTextSize(20);
+                weathertitle.setTextSize(20);
+            }else if(typenumber-'0' == 2){
+                Typeface typeface = getResources().getFont(R.font.nanumming);
+                history.setTypeface(typeface);
+                dateedit.setTypeface(typeface);
+                mind.setTypeface(typeface);
+                weather.setTypeface(typeface);
+                tag.setTypeface(typeface);
+                mindtitle.setTypeface(typeface);
+                tagtitle.setTypeface(typeface);
+                weathertitle.setTypeface(typeface);
+
+
+                history.setTextSize(20);
+                dateedit.setTextSize(20);
+                mind.setTextSize(20);
+                weather.setTextSize(20);
+                tag.setTextSize(20);
+                mindtitle.setTextSize(20);
+                tagtitle.setTextSize(20);
+                weathertitle.setTextSize(20);
+            }else if(typenumber-'0' == 3){
+                Typeface typeface = getResources().getFont(R.font.nanumgom);
+                history.setTypeface(typeface);
+                dateedit.setTypeface(typeface);
+                mind.setTypeface(typeface);
+                weather.setTypeface(typeface);
+                tag.setTypeface(typeface);
+                mindtitle.setTypeface(typeface);
+                tagtitle.setTypeface(typeface);
+                weathertitle.setTypeface(typeface);
+
+
+                history.setTextSize(20);
+                dateedit.setTextSize(20);
+                mind.setTextSize(20);
+                weather.setTextSize(20);
+                tag.setTextSize(20);
+                mindtitle.setTextSize(20);
+                tagtitle.setTextSize(20);
+                weathertitle.setTextSize(20);
+            }else if(typenumber-'0' == 4){
+                Typeface typeface = getResources().getFont(R.font.naumgori);
+                history.setTypeface(typeface);
+                dateedit.setTypeface(typeface);
+                mind.setTypeface(typeface);
+                weather.setTypeface(typeface);
+                tag.setTypeface(typeface);
+                mindtitle.setTypeface(typeface);
+                tagtitle.setTypeface(typeface);
+                weathertitle.setTypeface(typeface);
+
+
+
+                history.setTextSize(20);
+                dateedit.setTextSize(20);
+                mind.setTextSize(20);
+                weather.setTextSize(20);
+                tag.setTextSize(20);
+                mindtitle.setTextSize(20);
+                tagtitle.setTextSize(20);
+                weathertitle.setTextSize(20);
+            }
+        } catch (FileNotFoundException e) {
+
+        } catch (IOException e) {
 
         }
     }
