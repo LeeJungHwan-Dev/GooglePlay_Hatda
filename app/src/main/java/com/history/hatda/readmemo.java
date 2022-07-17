@@ -43,7 +43,7 @@ public class readmemo extends AppCompatActivity {
     ImageButton del,edit,exit,setting;
     ImageView rehistorypic;
     LinearLayout refirstback;
-    String day,time,date,num;
+    String day,time,date,num,Month;
     private InterstitialAd mInterstitialAd;
     ProgressDialog dialog;
 
@@ -88,11 +88,8 @@ public class readmemo extends AppCompatActivity {
 
 
 
-        Intent intent = getIntent();
-        day = intent.getStringExtra("day");
-        time = intent.getStringExtra("시간");
-        date = intent.getStringExtra("날짜");
-        num = intent.getStringExtra("카운트");
+        getDate();
+
 
         try {
             setday.setText(readFile("d"+day+".txt"));
@@ -350,6 +347,8 @@ public class readmemo extends AppCompatActivity {
                 intent1.putExtra("배경",back);
                 intent1.putExtra("시간",time);
                 intent1.putExtra("월일",date);
+                intent1.putExtra("수정월",Month);
+                //추가된 코드
                 intent1.putExtra("카운트",num);
                 intent1.putExtra("수정",1);
                 intent1.putExtra("폰트색상",fontcolor);
@@ -517,5 +516,16 @@ public class readmemo extends AppCompatActivity {
         } catch (IOException e) {
 
         }
+    }
+
+    public void getDate(){
+        try {
+            Intent intent = getIntent();
+            day = intent.getStringExtra("day");
+            Month = intent.getStringExtra("수정월");
+            time = intent.getStringExtra("시간");
+            date = intent.getStringExtra("날짜");
+            num = intent.getStringExtra("카운트");
+        }catch (Exception e){}
     }
 }

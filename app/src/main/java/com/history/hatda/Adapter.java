@@ -36,12 +36,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
     ArrayList<String> date;
     ArrayList<String> imgpath;
     ArrayList<String> memotext;
-    ArrayList<String> sort,back,fontcolor,tag,weather,mind;
+    ArrayList<String> sort,back,fontcolor,tag,weather,mind,goMonth;
     static ArrayList<String> goday;
     Context mContext;
     String chosetime, count, chosedate;
 
-    public Adapter(ArrayList<String> date, ArrayList<String> textpath, ArrayList<String> goday, ArrayList<String> imgpath,ArrayList<String> sort,ArrayList<String> back, Context mContext,ArrayList<String>fontcolor, ArrayList<String> weather, ArrayList<String> mind, ArrayList<String> tag) {
+    public Adapter(ArrayList<String> date, ArrayList<String> textpath, ArrayList<String> goday, ArrayList<String> imgpath,ArrayList<String> sort,ArrayList<String> back, Context mContext,ArrayList<String>fontcolor, ArrayList<String> weather, ArrayList<String> mind, ArrayList<String> tag,ArrayList<String>goMonth) {
         this.date = date; // 날짜
         this.memotext = textpath; //텍스트
         this.goday = goday; // 이동날짜
@@ -53,7 +53,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
         this.weather = weather;
         this.mind = mind;
         this.tag = tag;
-
+        this.goMonth = goMonth;
 
     }
 
@@ -136,6 +136,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
                     int pos = getAdapterPosition();
                     Intent intent = new Intent(mContext, readmemo.class);
                     intent.putExtra("day", goday.get(pos));
+                    intent.putExtra("수정월",goMonth.get(pos));
+                    //이 day 값이 yyyy / MM / DD 로 넘어와야한다.
+                    //하지만 저렇게 넘어오면 파일을 못 찾으니 새로운 배열을 하나 넣어 넘겨주자.
+                    //인텐트도 추가할것
                     intent.putExtra("시간", chosetime);
                     intent.putExtra("카운트", count);
                     intent.putExtra("날짜", chosedate);

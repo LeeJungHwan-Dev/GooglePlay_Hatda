@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -50,6 +51,7 @@ public class history extends AppCompatActivity {
     ArrayList<String> imgpath = new ArrayList<>();
     ArrayList<String> memotext = new ArrayList<>();
     ArrayList<String> goday = new ArrayList<>();
+    ArrayList<String> goMonth = new ArrayList<>();
     ArrayList<String> sort = new ArrayList<>();
     ArrayList<String> back = new ArrayList<>();
     ArrayList<String> fontcolor = new ArrayList<>();
@@ -58,10 +60,10 @@ public class history extends AppCompatActivity {
     ArrayList<String> itemmind = new ArrayList<>();
     ArrayList<String> itemtag = new ArrayList<>();
 
-    String datem,filem;
+    String datem,filem,editfilem;
     String chosetime;
     ImageButton exit,setting,bt3;
-    Adapter adapter = new Adapter(date,memotext,goday,imgpath,sort,back,this,fontcolor,itemweather,itemmind,itemtag);
+    Adapter adapter = new Adapter(date,memotext,goday,imgpath,sort,back,this,fontcolor,itemweather,itemmind,itemtag,goMonth);
 
 
     @Override
@@ -165,7 +167,13 @@ public class history extends AppCompatActivity {
         Date timeDate = new Date();
         times = time.format(timeDate);
 
+        SimpleDateFormat time2 = new SimpleDateFormat("yyyyMM");
+        Date timeDate2 = new Date();
+        editfilem = time2.format(timeDate2);
+
         filem = times;
+        // filem에다가 MM 형식으로 넣어줘야한다.
+
 
         adapter.chosetime = times;
         adapter.count = String.valueOf(count);
@@ -220,7 +228,7 @@ public class history extends AppCompatActivity {
                 timetext.setText(datem);
                 filem = fileaddmm(count);
 
-                readfile(filem);
+                readfile(filem,editfilem);
                 imglist imglist = new imglist();
                 imglist.start();
                 adapter.notifyDataSetChanged();
@@ -245,7 +253,7 @@ public class history extends AppCompatActivity {
                     datem = addmm(count);
                     timetext.setText(datem);
                     filem = fileaddmm(count);
-                    readfile(filem);
+                    readfile(filem,editfilem);
                     imglist imglist = new imglist();
                     imglist.start();
                     adapter.notifyDataSetChanged();
@@ -271,13 +279,13 @@ public class history extends AppCompatActivity {
             }
         });
 
-        readfile(times);
+        readfile(times,editfilem);
         imglist imglist = new imglist();
         imglist.start();
 
 
 
-        Adapter adapter = new Adapter(date,memotext,goday,imgpath,sort,back,this,fontcolor,itemweather,itemmind,itemtag);
+        Adapter adapter = new Adapter(date,memotext,goday,imgpath,sort,back,this,fontcolor,itemweather,itemmind,itemtag,goMonth);
         adapter.notifyDataSetChanged();
         item.setLayoutManager(new LinearLayoutManager(this));
         item.setAdapter(adapter);
@@ -366,13 +374,14 @@ public class history extends AppCompatActivity {
         }
     }
 
-    public void readfile(String times1){
+    public void readfile(String times1,String times2){
 
         String times = times1;
-        String fileName;
+        String fileName,editName;
 
             for(int i = 1; i <= 31; i++) {
                 fileName = times + i;
+                editName = times2 + i;
                 Path path = Paths.get(String.valueOf(getFilesDir()), "e" + fileName + ".txt");
                 if (Files.exists(path, LinkOption.NOFOLLOW_LINKS)) {
                     Path path2 = Paths.get(String.valueOf(getFilesDir()), "img" + fileName + ".jpeg");
@@ -395,6 +404,7 @@ public class history extends AppCompatActivity {
                         }
                         date.add(data.toString());
                         goday.add(fileName);
+                        goMonth.add(editName);
                         buffer.close();
                     } else {
                     }

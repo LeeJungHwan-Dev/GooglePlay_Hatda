@@ -514,12 +514,12 @@ public class edit extends AppCompatActivity {
             }
         });
 
+
         try {
+
             Intent intent = getIntent();
             day = intent.getStringExtra("날짜");
-            infoday = intent.getStringExtra("날짜");
-
-
+            infoday = intent.getStringExtra("수정월");
             StringBuffer sb = new StringBuffer();
             sb.append(infoday);
             if (infoday.length() == 6) {
@@ -530,8 +530,6 @@ public class edit extends AppCompatActivity {
                 sb.insert(7, "-");
             }
             infoday = sb.toString();
-
-            /////버그 고칠것
 
             background = intent.getIntExtra("배경", 1);
             editcheck = intent.getIntExtra("수정", 0);
