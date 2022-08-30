@@ -12,8 +12,8 @@ android {
         applicationId "com.history.hatda"
         minSdkVersion 27
         targetSdkVersion 31
-        versionCode 32
-        versionName "6.7.1"
+        versionCode 33
+        versionName "6.7.2"
         //oneStore 패키지 명 : com.history.hatdaOnestore 버전 코드 11 버전 2.7
         //플레이 스토어 패키지 명 : com.history.hatda 버전 코드 32 버전 6.7.1
 
