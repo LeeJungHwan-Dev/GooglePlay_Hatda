@@ -526,7 +526,7 @@ public class edit extends AppCompatActivity {
                 sb.insert(4, "-");
                 sb.insert(6, "-");
             } else {
-                sb.insert(4, "-");
+                sb.insert(4, "-"); //4
                 sb.insert(7, "-");
             }
             infoday = sb.toString();

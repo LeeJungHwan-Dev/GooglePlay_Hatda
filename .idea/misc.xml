@@ -47,7 +47,9 @@
         <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/mipmap-anydpi-v26/ic_main_round.xml" value="0.1" />
         <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/mipmap-anydpi-v26/icon1_main.xml" value="0.1953125" />
         <entry key="..\:/Users/after/AndroidStudioProjects/hatda/app/src/main/res/mipmap-anydpi-v26/icon1_main_round.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v24/button_line2.xml" value="0.2405" />
         <entry key="app/src/main/res/drawable-v24/line3.xml" value="0.1255" />
+        <entry key="app/src/main/res/drawable/button_line.xml" value="0.2405" />
         <entry key="app/src/main/res/layout/activity_bigpicshow.xml" value="0.22447916666666667" />
         <entry key="app/src/main/res/layout/activity_edit.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_getsetpassword.xml" value="0.22447916666666667" />
