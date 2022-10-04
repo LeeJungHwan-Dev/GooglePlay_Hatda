@@ -63,8 +63,10 @@
 - 배포 여부 : X<br>
 
 ## 사용 라이브러리
-- DB : Firebase DB<br>
-- Chart : MPAndroidChart<br>
+- 색상 선택 : colorpicker
+- 커스텀 달력 : material-calendarview
+- 광고 : Googld Admob
+- 이미지 로딩 : Glide , PhotoView
 
 ## 테스트 환경
 - 안드로이드 Ver : Android 11<br>
