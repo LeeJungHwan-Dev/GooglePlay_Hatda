@@ -47,7 +47,6 @@
     <td><img src = "https://user-images.githubusercontent.com/93726941/176595221-ec9d70f1-3115-4d7f-8e07-868c470f8406.png" width = "180" hight = "250"/>
     <td><img src = "https://user-images.githubusercontent.com/93726941/176595459-df9e4ca5-d1c6-4393-90f7-53c149793db9.png" width = "180" hight = "250"/>
     
-<tr>
 </table>
 
 ## 📌 업데이트 이력
